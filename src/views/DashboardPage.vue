@@ -55,7 +55,7 @@
           </div>
           <div class="grid xl:mt-4">
             <div class="flex items-center gap-1">
-              <img class="caret-down-icon" :class="{ '!rotate-0': isRotate }" src="@/assets/images/icon/caret-down.png" alt="展開" @click="isRotate = !isRotate">
+              <img class="caret-down-icon" :class="{ '!rotate-0': isRotate }" src="@/assets/images/caret-down.png" alt="展開" @click="isRotate = !isRotate">
               <h2 @click="isCertificateShow.python00 = !isCertificateShow.python00">大數據分析專業人才</h2>
             </div>
             <div v-if="isRotate" class="grid gap-1 w-fit ml-[40px] opacity-90">
@@ -123,7 +123,7 @@ BeautifulSoup 套件，懂資料庫基本操作，已取得 TQC 大數據分析�
     </div>
 
     <div v-if="Object.values(isCertificateShow).some(show => show)" class="certificates" @click="isCertificateShowAll">
-      <img class="close-icon" src="@/assets/images/icon/xmark-solid.png" alt="關閉">
+      <img class="close-icon" src="@/assets/images/xmark-solid.png" alt="關閉">
       <img v-if="isCertificateShow.python00" class="certificates-img" src="@/assets/images/certificate/certificate00.jpg" alt="TQC 大數據分析專業人才">
       <img v-if="isCertificateShow.python01" class="certificates-img" src="@/assets/images/certificate/certificate01.jpg" alt="TQC">
       <img v-if="isCertificateShow.python02" class="certificates-img" src="@/assets/images/certificate/certificate02.jpg" alt="TQC">
