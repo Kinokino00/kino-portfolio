@@ -74,68 +74,68 @@
       </div>
       <div class="grid gap-1 ml-4 md:grid-cols-2 2xl:gap-3">
         <div class="flex items-center gap-1 md:hidden">
-          <img class="icon" src="@/assets/images/Java.png">
+          <img class="icon" src="/kino-portfolio/assets/Java.png">
           <p>Java</p>
         </div>
         <div class="flex items-center gap-1 md:hidden">
-          <img class="icon" src="@/assets/images/Vue.png">
+          <img class="icon" src="/kino-portfolio/assets/Vue.png">
           <p>Vue</p>
         </div>
         <div class="flex items-center gap-1 md:hidden">
-          <img class="icon" src="@/assets/images/Python.png">
+          <img class="icon" src="/kino-portfolio/assets/Python.png">
           <p>Python</p>
         </div>
         <div class="flex items-center gap-1 md:hidden">
-          <img class="icon" src="@/assets/images/Tailwindcss.png">
+          <img class="icon" src="/kino-portfolio/assets/Tailwindcss.png">
           <p>Tailwindcss</p>
         </div>
         <div class="flex items-center gap-1 md:hidden">
-          <img class="icon" src="@/assets/images/Selenium.png">
+          <img class="icon" src="/kino-portfolio/assets/Selenium.png">
           <p>Selenium</p>
         </div>
         <div class="flex items-center gap-1 md:hidden">
-          <img class="icon" src="@/assets/images/Typescript.png">
+          <img class="icon" src="/kino-portfolio/assets/Typescript.png">
           <p>Typescript</p>
         </div>
         <div class="flex items-center gap-1 md:hidden">
-          <img class="icon" src="@/assets/images/BeautifulSoup.png">
+          <img class="icon" src="/kino-portfolio/assets/BeautifulSoup.png">
           <p>BeautifulSoup</p>
         </div>
         <div class="flex items-center gap-1 md:hidden">
-          <img class="icon" src="@/assets/images/Javascript.png">
+          <img class="icon" src="/kino-portfolio/assets/Javascript.png">
           <p>Javascript</p>
         </div>
 
         <div class="hidden items-center gap-1 md:flex">
-          <img class="icon" src="@/assets/images/Java.png">
+          <img class="icon" src="/kino-portfolio/assets/Java.png">
           <p>Java</p>
         </div>
         <div class="hidden items-center gap-1 md:flex">
-          <img class="icon" src="@/assets/images/Python.png">
+          <img class="icon" src="/kino-portfolio/assets/Python.png">
           <p>Python</p>
         </div>
         <div class="hidden items-center gap-1 md:flex">
-          <img class="icon" src="@/assets/images/Selenium.png">
+          <img class="icon" src="/kino-portfolio/assets/Selenium.png">
           <p>Selenium</p>
         </div>
         <div class="hidden items-center gap-1 md:flex">
-          <img class="icon" src="@/assets/images/BeautifulSoup.png">
+          <img class="icon" src="/kino-portfolio/assets/BeautifulSoup.png">
           <p>BeautifulSoup</p>
         </div>
         <div class="hidden items-center gap-1 md:flex">
-          <img class="icon" src="@/assets/images/Vue.png">
+          <img class="icon" src="/kino-portfolio/assets/Vue.png">
           <p>Vue</p>
         </div>
         <div class="hidden items-center gap-1 md:flex">
-          <img class="icon" src="@/assets/images/Tailwindcss.png">
+          <img class="icon" src="/kino-portfolio/assets/Tailwindcss.png">
           <p>Tailwindcss</p>
         </div>
         <div class="hidden items-center gap-1 md:flex">
-          <img class="icon" src="@/assets/images/Typescript.png">
+          <img class="icon" src="/kino-portfolio/assets/Typescript.png">
           <p>Typescript</p>
         </div>
         <div class="hidden items-center gap-1 md:flex">
-          <img class="icon" src="@/assets/images/Javascript.png">
+          <img class="icon" src="/kino-portfolio/assets/Javascript.png">
           <p>Javascript</p>
         </div>
       </div>
