@@ -74,11 +74,11 @@
       </div>
       <div class="grid gap-1 ml-4 md:grid-cols-2 2xl:gap-3">
         <div class="flex items-center gap-1 md:hidden" v-for="skill in skills" :key="skill">
-          <img class="icon" :src="`src/assets/images/icon/${skill}.png`">
+          <img class="icon" :src="`@/assets/images/icon/${skill}.png`">
           <p>{{ skill }}</p>
         </div>
         <div class="hidden items-center gap-1 md:flex" v-for="skill in skillsMd" :key="skill">
-          <img class="icon" :src="`src/assets/images/icon/${skill}.png`">
+          <img class="icon" :src="`@/assets/images/icon/${skill}.png`">
           <p>{{ skill }}</p>
         </div>
       </div>
