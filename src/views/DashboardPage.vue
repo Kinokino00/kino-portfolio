@@ -9,10 +9,12 @@
             <div class="circle"></div>
             <div class="area-info-detail">
               <p class="font-num">{{ info.ad }}
-                <span v-if="info.tenureYear && info.tenureMonth" class="opacity-60">
+                <span v-if="info.tenureYear" class="opacity-60">
                   &nbsp;|&nbsp;
                   <span class="number">{{ info.tenureYear }}</span>y
-                  <span>{{ info.tenureMonth }}</span>m
+                  <span v-if="info.tenureMonth">
+                    <span>{{ info.tenureMonth }}</span>m
+                  </span>
                 </span>
               </p>
               <div class="flex flex-col md:flex-row md:gap-1">
@@ -50,18 +52,28 @@
       </div>
       <div class="area-info">
         <div class="area-info-detail">
-          <div class="area-info-image">
-            <div class="TQC"></div>
-          </div>
-          <div class="grid xl:mt-4">
-            <div class="flex items-center gap-1">
-              <img class="caret-down-icon" :class="{ '!rotate-0': isRotate }" src="@/assets/images/caret-down.png" alt="展開" @click="isRotate = !isRotate">
-              <h2 @click="isCertificateShow.python00 = !isCertificateShow.python00">大數據分析專業人才</h2>
+          <div class="flex flex-col gap-1">
+            <div class="area-info-image icon-ITS">
+              <div class="ITS hidden md:block"></div>
+              <div class="ITS-s md:hidden"></div>
             </div>
-            <div v-if="isRotate" class="grid gap-1 w-fit ml-[40px] opacity-90">
-              <p @click="isCertificateShow.python03 = !isCertificateShow.python03">軟體開發知識</p>
-              <p @click="isCertificateShow.python02 = !isCertificateShow.python02">網頁資料擷取與分析 Python3</p>
-              <p @click="isCertificateShow.python01 = !isCertificateShow.python01">程式語言 Python3</p>
+            <h2 style="text-decoration: auto; cursor: unset;">ITS Java</h2>
+          </div>
+          <div class="flex flex-col gap-1">
+            <div class="area-info-image">
+              <div class="TQC"></div>
+            </div>
+            <h2 @click="isCertificateShow.tqcjava = !isCertificateShow.tqcjava">物件導向程式語言 Java</h2>
+            <div class="grid xl:mt-1">
+              <div class="flex items-center gap-1">
+                <img class="caret-down-icon" :class="{ '!rotate-0': isRotate }" src="@/assets/images/caret-down.png" alt="展開" @click="isRotate = !isRotate">
+                <h2 @click="isCertificateShow.python00 = !isCertificateShow.python00">大數據分析專業人才</h2>
+              </div>
+              <div v-if="isRotate" class="grid gap-1 w-fit ml-2 pl-3 opacity-90 border-l border-l-primary-600">
+                <p @click="isCertificateShow.python03 = !isCertificateShow.python03">軟體開發知識</p>
+                <p @click="isCertificateShow.python02 = !isCertificateShow.python02">網頁資料擷取與分析 Python3</p>
+                <p @click="isCertificateShow.python01 = !isCertificateShow.python01">程式語言 Python3</p>
+              </div>
             </div>
           </div>
         </div>
@@ -78,6 +90,10 @@
           <p>Java</p>
         </div>
         <div class="flex items-center gap-1 md:hidden">
+          <img class="icon" src="@/assets/images/SpringBoot.png">
+          <p>Spring Boot</p>
+        </div>
+        <div class="flex items-center gap-1 md:hidden">
           <img class="icon" src="@/assets/images/Vue.png">
           <p>Vue</p>
         </div>
@@ -111,28 +127,34 @@
           <p>Java</p>
         </div>
         <div class="hidden items-center gap-1 md:flex">
-          <img class="icon" src="@/assets/images/Python.png">
-          <p>Python</p>
         </div>
         <div class="hidden items-center gap-1 md:flex">
-          <img class="icon" src="@/assets/images/Selenium.png">
-          <p>Selenium</p>
-        </div>
-        <div class="hidden items-center gap-1 md:flex">
-          <img class="icon" src="@/assets/images/BeautifulSoup.png">
-          <p>BeautifulSoup</p>
+          <img class="icon" src="@/assets/images/SpringBoot.png">
+          <p>Spring Boot</p>
         </div>
         <div class="hidden items-center gap-1 md:flex">
           <img class="icon" src="@/assets/images/Vue.png">
           <p>Vue</p>
         </div>
         <div class="hidden items-center gap-1 md:flex">
+          <img class="icon" src="@/assets/images/Python.png">
+          <p>Python</p>
+        </div>
+        <div class="hidden items-center gap-1 md:flex">
           <img class="icon" src="@/assets/images/Tailwindcss.png">
           <p>Tailwindcss</p>
         </div>
         <div class="hidden items-center gap-1 md:flex">
+          <img class="icon" src="@/assets/images/Selenium.png">
+          <p>Selenium</p>
+        </div>
+        <div class="hidden items-center gap-1 md:flex">
           <img class="icon" src="@/assets/images/Typescript.png">
           <p>Typescript</p>
+        </div>
+        <div class="hidden items-center gap-1 md:flex">
+          <img class="icon" src="@/assets/images/BeautifulSoup.png">
+          <p>BeautifulSoup</p>
         </div>
         <div class="hidden items-center gap-1 md:flex">
           <img class="icon" src="@/assets/images/Javascript.png">
@@ -146,8 +168,7 @@
         <h5>關於我</h5>
       </div>
       <p class="text-justify">
-        　　具備兩年以上後端學習背景，使用語言為 Java、Python，會使用 Django 框架及 Selenium、
-BeautifulSoup 套件，懂資料庫基本操作，已取得 TQC 大數據分析專業人才證照。<br><br>
+        　　具備兩年後端學習背景，使用語言為 Java、Python，會使用 Java 的 Spring Boot 框架及 Python 的 Selenium、BeautifulSoup 套件，懂資料庫基本操作，已取得 ITS Java、TQC 物件導向程式語言 Java、 TQC 大數據分析專業人才證照。<br><br>
   
         　　兩年前端經驗，於 Vue.js 前端框架專案中負責規劃 RWD 響應式網頁，並進行 API 串接與 CRUD 功能實作。<br><br>
 
@@ -164,9 +185,10 @@ BeautifulSoup 套件，懂資料庫基本操作，已取得 TQC 大數據分析�
       <div class="grid">
         <a class="title-a" href="https://gems-tw-enterprise-se.ew-demo.com/" target="_blank">智慧能源管理監控系統</a>
         <ol>
+          <li>前端框架 - 使用 Vue.js 進行前端開發</li>
           <li>響應式介面 - 利用 Scss + Tailwindcss 之 CSS 框架規劃</li>
           <li>圖形化報表 - amChart.js 設計能源分析比較圖表</li>
-          <li>表單動態驗證 - 以 Yup 之 JavaScript 架構構建器於前端先行匹配 API 之 Payload</li>
+          <li>表單動態驗證 - 以 Yup 之 JavaScript 套件進行驗證</li>
           <li>動畫 - 運用 Lottie Animation 製作動態畫面</li>
         </ol>
       </div>
@@ -180,11 +202,12 @@ BeautifulSoup 套件，懂資料庫基本操作，已取得 TQC 大數據分析�
     </div>
 
     <div v-if="Object.values(isCertificateShow).some(show => show)" class="certificates" @click="isCertificateShowAll">
-      <img class="close-icon" src="@/assets/images/xmark-solid.png" alt="關閉">
+      <img v-if="isCertificateShow.tqcjava" class="certificates-img" src="@/assets/images/certificate/certificateTQCjava.jpg" alt="TQC java">
       <img v-if="isCertificateShow.python00" class="certificates-img" src="@/assets/images/certificate/certificate00.jpg" alt="TQC 大數據分析專業人才">
       <img v-if="isCertificateShow.python01" class="certificates-img" src="@/assets/images/certificate/certificate01.jpg" alt="TQC">
       <img v-if="isCertificateShow.python02" class="certificates-img" src="@/assets/images/certificate/certificate02.jpg" alt="TQC">
       <img v-if="isCertificateShow.python03" class="certificates-img" src="@/assets/images/certificate/certificate03.jpg" alt="TQC">
+      <img class="close-icon" src="@/assets/images/xmark-solid.png" alt="關閉">
     </div>
   </div>
 </template>
@@ -205,7 +228,8 @@ interface CertificateItem {
 
 const certificateItem = ref<CertificateItem[]>([
   {
-    ad: '2023/05 ~',
+    tenureYear: 2,
+    ad: '2023/05 ~ 2025/06',
     job: 'Front-End Developer',
     ml: 104,
     company: '樺康智雲股份有限公司',
@@ -271,12 +295,14 @@ const projectItem = ref([
 ])
 
 const isCertificateShow = reactive({
+  tqcjava: false,
   python00: false,
   python01: false,
   python02: false,
   python03: false
 })
 const isCertificateShowAll = () => {
+  isCertificateShow.tqcjava = false
   isCertificateShow.python00 = false
   isCertificateShow.python01 = false
   isCertificateShow.python02 = false
@@ -286,6 +312,9 @@ const isCertificateShowAll = () => {
 
 
 <style lang="scss" scoped>
+h2 {
+  @apply font-semibold;
+}
 .dashboard {
   @apply relative py-[8vh] md:pt-[13vh];
   background: linear-gradient(to right, #F8F6F3 15%, #FFD0A6 15.1%, #FFD0A6 60%, #F8F6F3 60.1%);
@@ -341,7 +370,7 @@ p {
   &-info {
     @apply flex items-baseline gap-2 2xl:gap-3;
     &-detail {
-      @apply flex flex-col gap-0.5;
+      @apply flex flex-col gap-1.5;
     }
     &-label {
       @apply relative text-base text-end font-bold md:text-lg;
@@ -368,12 +397,26 @@ p {
           @apply md:w-[130px] md:h-[40px];
           @apply lg:w-[210px] lg:h-[80px];
           @apply xl:w-[240px];
-          .TQC {
+          &.icon-ITS {
+            @apply w-[30px] h-[16px] -ml-2;
+            @apply md:w-[150px] md:h-[88px];
+            @apply lg:w-[216px] lg:h-[124px];
+          }
+          .ITS, .ITS-s, .TQC {
             @apply h-full;
-            background-image: url('@/assets/images/TQC.svg');
             background-position: center right;
             background-repeat: no-repeat;
             background-size: cover;
+          }
+          .ITS {
+            @apply -ml-2;
+            background-image: url('@/assets/images/ITS.png');
+            &-s {
+              background-image: url('@/assets/images/ITS-s.png');
+            }
+          }
+          .TQC {
+            background-image: url('@/assets/images/TQC.svg');
           }
         }
         &-detail {
@@ -451,7 +494,7 @@ p {
   @apply  md:left-[58vw]  md:mt-[7.5rem];
   @apply  lg:left-[55.5vw];
   @apply  xl:left-[53vw]  xl:mt-[.5rem];
-  @apply 2xl:left-[54vw] 2xl:mt-0.5;
+  @apply 2xl:left-[53.5vw] 2xl:mt-0.5;
 }
 
 .certificates {
@@ -460,7 +503,7 @@ p {
     @apply absolute left-6 top-6 w-7 h-7 cursor-pointer;
   }
   &-img {
-    @apply absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[90vw];
+    @apply absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-[80vh];
   }
 }
 
