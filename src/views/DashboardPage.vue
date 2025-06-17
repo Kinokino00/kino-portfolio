@@ -94,28 +94,28 @@
           <p>Spring Boot</p>
         </div>
         <div class="flex items-center gap-1 md:hidden">
-          <img class="icon" src="@/assets/images/Vue.png">
-          <p>Vue</p>
-        </div>
-        <div class="flex items-center gap-1 md:hidden">
           <img class="icon" src="@/assets/images/Python.png">
           <p>Python</p>
-        </div>
-        <div class="flex items-center gap-1 md:hidden">
-          <img class="icon" src="@/assets/images/Tailwindcss.png">
-          <p>Tailwindcss</p>
         </div>
         <div class="flex items-center gap-1 md:hidden">
           <img class="icon" src="@/assets/images/Selenium.png">
           <p>Selenium</p>
         </div>
         <div class="flex items-center gap-1 md:hidden">
-          <img class="icon" src="@/assets/images/Typescript.png">
-          <p>Typescript</p>
-        </div>
-        <div class="flex items-center gap-1 md:hidden">
           <img class="icon" src="@/assets/images/BeautifulSoup.png">
           <p>BeautifulSoup</p>
+        </div>
+        <div class="flex items-center gap-1 md:hidden">
+          <img class="icon" src="@/assets/images/Vue.png">
+          <p>Vue</p>
+        </div>
+        <div class="flex items-center gap-1 md:hidden">
+          <img class="icon" src="@/assets/images/Tailwindcss.png">
+          <p>Tailwindcss</p>
+        </div>
+        <div class="flex items-center gap-1 md:hidden">
+          <img class="icon" src="@/assets/images/Typescript.png">
+          <p>Typescript</p>
         </div>
         <div class="flex items-center gap-1 md:hidden">
           <img class="icon" src="@/assets/images/Javascript.png">
@@ -451,7 +451,7 @@ p {
       @apply xl:-ml-[2.5rem] xl:w-[6rem];
     }
     .icon {
-      @apply w-7 h-7;
+      @apply min-w-fit w-7 h-7;
       @apply lg:w-9 lg:h-9;
     }
   }
