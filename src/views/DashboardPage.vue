@@ -102,7 +102,7 @@
           <p>Selenium</p>
         </div>
         <div class="flex items-center gap-1 md:hidden">
-          <img class="icon" src="@/assets/images/BeautifulSoup.png">
+          <img class="icon !min-w-[56px]" src="@/assets/images/BeautifulSoup.png">
           <p>BeautifulSoup</p>
         </div>
         <div class="flex items-center gap-1 md:hidden">
@@ -153,7 +153,7 @@
           <p>Typescript</p>
         </div>
         <div class="hidden items-center gap-1 md:flex">
-          <img class="icon" src="@/assets/images/BeautifulSoup.png">
+          <img class="icon !min-w-[56px] lg:!min-w-[72px]" src="@/assets/images/BeautifulSoup.png">
           <p>BeautifulSoup</p>
         </div>
         <div class="hidden items-center gap-1 md:flex">
@@ -261,38 +261,6 @@ const certificateItem = ref<CertificateItem[]>([
 ])
 
 const isRotate = ref(false)
-const skills = ['Java', 'Vue', 'Python', 'Tailwindcss', 'Selenium', 'Typescript', 'BeautifulSoup', 'Javascript']
-const skillsMd = ['Java', 'Python', 'Selenium', 'BeautifulSoup', 'Vue', 'Tailwindcss', 'Typescript', 'Javascript']
-
-const projectItem = ref([
-  {
-    label: 'Back-end',
-    text: [{ name: 'Meet Food' }]
-  }, {
-    label: 'Front-end',
-    text: [{
-        year: 2024,
-        name: '能源管理系統'
-      }, {
-        year: 2021,
-        name: '龍奉宮'
-      }, {
-        year: 2020,
-        name: '台灣新計畫有限公司',
-        web: 'https://rabbitsos.ttoper.com/'
-    }]
-  }, {
-    label: 'Front-end & UI',
-    text: [{
-        year: 2022,
-        name: '樺晟科技股份有限公司',
-        web: 'https://robodencable.com/zh/'
-      }, {
-        year: 2022,
-        name: 'Ttoper'
-    }]
-  },
-])
 
 const isCertificateShow = reactive({
   tqcjava: false,
@@ -336,7 +304,7 @@ p {
   @apply text-xs md:text-sm;
 }
 .photo-kino {
-  @apply z-10 h-fit mb-[8vh] w-[34vw];
+  @apply z-10 max-h-fit mb-[8vh] w-[34vw];
   @apply  md:z-auto md:absolute md:bottom-[10%] md:left-[13vw] md:mb-0 md:w-[20vw];
   @apply  lg:-bottom-[15%] lg:left-[9.5vw]  lg:w-[20vw] lg:top-auto;
   @apply  xl:-bottom-[10%] xl:left-[10.9vw];
@@ -451,7 +419,7 @@ p {
       @apply xl:-ml-[2.5rem] xl:w-[6rem];
     }
     .icon {
-      @apply min-w-fit w-7 h-7;
+      @apply max-w-fit w-7 h-7;
       @apply lg:w-9 lg:h-9;
     }
   }
