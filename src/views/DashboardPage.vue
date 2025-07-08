@@ -57,7 +57,7 @@
               <div class="ITS hidden md:block"></div>
               <div class="ITS-s md:hidden"></div>
             </div>
-            <h2 style="text-decoration: auto; cursor: unset;">ITS Java</h2>
+            <h2 @click="isCertificateShow.itsjava = !isCertificateShow.itsjava">ITS Java</h2>
           </div>
           <div class="flex flex-col gap-1">
             <div class="area-info-image">
@@ -180,6 +180,19 @@
 
     <div class="area area-project">
       <div class="title-line">
+        <h5>Side Project</h5>
+      </div>
+      <div class="grid">
+        <a class="title-a" href="http://3.26.162.208:8080/" target="_blank">Top Food Now 餐廳推薦系統</a>
+        <ol>
+          <li>後端語言 - Java</li>
+          <li>後端框架 - Spring Boot</li>
+          <li>IDE - IntelliJ</li>
+          <li>資料庫 - MySQL</li>
+          <li>雲端平台 - AWS</li>
+        </ol>
+      </div>
+      <div class="title-line mt-3">
         <h5>前端專案經驗</h5>
       </div>
       <div class="grid">
@@ -202,6 +215,7 @@
     </div>
 
     <div v-if="Object.values(isCertificateShow).some(show => show)" class="certificates" @click="isCertificateShowAll">
+      <img v-if="isCertificateShow.itsjava" class="certificates-img" src="@/assets/images/certificate/certificateITSjava.jpg" alt="TQC java">
       <img v-if="isCertificateShow.tqcjava" class="certificates-img" src="@/assets/images/certificate/certificateTQCjava.jpg" alt="TQC java">
       <img v-if="isCertificateShow.python00" class="certificates-img" src="@/assets/images/certificate/certificate00.jpg" alt="TQC 大數據分析專業人才">
       <img v-if="isCertificateShow.python01" class="certificates-img" src="@/assets/images/certificate/certificate01.jpg" alt="TQC">
@@ -263,6 +277,7 @@ const certificateItem = ref<CertificateItem[]>([
 const isRotate = ref(false)
 
 const isCertificateShow = reactive({
+  itsjava: false,
   tqcjava: false,
   python00: false,
   python01: false,
@@ -270,6 +285,7 @@ const isCertificateShow = reactive({
   python03: false
 })
 const isCertificateShowAll = () => {
+  isCertificateShow.itsjava = false
   isCertificateShow.tqcjava = false
   isCertificateShow.python00 = false
   isCertificateShow.python01 = false
@@ -331,7 +347,7 @@ p {
     @apply  xl:pt-[10%]   xl:pb-[13%]  xl:mr-[7.5vw] xl:min-h-[40vh] xl:min-w-[66vw];
     @apply 2xl:pl-[24vw] 2xl:pt-[8%]  2xl:mr-[10vw] 2xl:min-h-[34vh];
     .area-line {
-      @apply absolute top-3 left-[3px] w-px h-full text-white bg-white;
+      @apply absolute top-4 xl:top-5 left-[3px] w-px h-full text-white bg-white;
     }
   }
 
@@ -445,7 +461,7 @@ p {
     @apply 2xl:-mt-[16vh];
     .title-line {
       @apply -ml-6 mb-2 w-[100px] text-secondary-900 border-secondary-900;
-      @apply md:w-[8.5rem] md:-ml-[3rem] md:mb-6;
+      @apply md:w-[8.5rem] md:-ml-[3rem];
       @apply lg:w-[11.5rem];
       @apply xl:-ml-[4rem];
     }
@@ -543,7 +559,7 @@ p {
   }
 
   &-a {
-    @apply mb-1 text-xs font-bold underline-offset-2;
+    @apply mb-1 w-fit text-xs font-bold underline-offset-2;
     text-decoration: underline;
   }
 }

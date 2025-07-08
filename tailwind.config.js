@@ -12,7 +12,7 @@ export default {
       'md': '630px',
       'lg': '840px',
       'xl': '980px',
-      '2xl': '1440px',  // 從這開始調
+      '2xl': '1440px',
       '3xl': '1600px'
     },
     fontSize: {
