@@ -1,19 +1,22 @@
 <template>
   <div class="dashboard">
     <div class="relative flex items-center">
-      <img class="photo-kino md:hidden" src="@/assets/images/Kino.jpg">
+      <img class="photo-kino md:hidden" src="@/assets/images/Kino.jpg" />
       <div class="area area-work">
         <div class="area-mask grid gap-1.5 w-fit lg:gap-5">
           <div class="area-line area-mask"></div>
           <div class="area-info" v-for="info in certificateItem" :key="info.ad">
             <div class="circle"></div>
             <div class="area-info-detail">
-              <p class="font-num">{{ info.ad }}
+              <p class="font-num">
+                {{ info.ad }}
                 <span v-if="info.tenureYear" class="opacity-60">
                   &nbsp;|&nbsp;
-                  <span class="number">{{ info.tenureYear }}</span>y
+                  <span class="number">{{ info.tenureYear }}</span
+                  >y
                   <span v-if="info.tenureMonth">
-                    <span>{{ info.tenureMonth }}</span>m
+                    <span>{{ info.tenureMonth }}</span
+                    >m
                   </span>
                 </span>
               </p>
@@ -31,18 +34,22 @@
           </div>
         </div>
       </div>
-      <img class="photo-kino hidden md:block" src="@/assets/images/Kino.jpg">
+      <img class="photo-kino hidden md:block" src="@/assets/images/Kino.jpg" />
       <div class="title-menu">
         <h1 class="title-name" data-text="Kino"></h1>
         <h1 class="title-portfolio">Portfolio</h1>
         <h1 class="title-portfolio absolute bottom-0 right-0 hidden md:block xl:hidden">folio</h1>
-        <h1 class="title-portfolio absolute bottom-0 right-0 opacity-50 hidden md:block xl:hidden">folio</h1>
+        <h1 class="title-portfolio absolute bottom-0 right-0 opacity-50 hidden md:block xl:hidden">
+          folio
+        </h1>
       </div>
     </div>
 
     <p class="university">
       世新大學
-      <span class="-ml-[2px] text-[10px] tracking-tight opacity-80 xl:text-sm">(2011-2015)&nbsp;&nbsp;</span>
+      <span class="-ml-[2px] text-[10px] tracking-tight opacity-80 xl:text-sm"
+        >(2011-2015)&nbsp;&nbsp;</span
+      >
       <span class="text-[10px] opacity-50">圖文傳播暨數位出版學系</span>
     </p>
 
@@ -63,16 +70,35 @@
             <div class="area-info-image">
               <div class="TQC"></div>
             </div>
-            <h2 @click="isCertificateShow.tqcjava = !isCertificateShow.tqcjava">物件導向程式語言 Java</h2>
+            <h2 @click="isCertificateShow.tqcjava = !isCertificateShow.tqcjava">
+              物件導向程式語言 Java
+            </h2>
             <div class="grid xl:mt-1">
               <div class="flex items-center gap-1">
-                <img class="caret-down-icon" :class="{ '!rotate-0': isRotate }" src="@/assets/images/caret-down.png" alt="展開" @click="isRotate = !isRotate">
-                <h2 @click="isCertificateShow.python00 = !isCertificateShow.python00">大數據分析專業人才</h2>
+                <img
+                  class="caret-down-icon"
+                  :class="{ '!rotate-0': isRotate }"
+                  src="@/assets/images/caret-down.png"
+                  alt="展開"
+                  @click="isRotate = !isRotate"
+                />
+                <h2 @click="isCertificateShow.python00 = !isCertificateShow.python00">
+                  大數據分析專業人才
+                </h2>
               </div>
-              <div v-if="isRotate" class="grid gap-1 w-fit ml-2 pl-3 opacity-90 border-l border-l-primary-600">
-                <p @click="isCertificateShow.python03 = !isCertificateShow.python03">軟體開發知識</p>
-                <p @click="isCertificateShow.python02 = !isCertificateShow.python02">網頁資料擷取與分析 Python3</p>
-                <p @click="isCertificateShow.python01 = !isCertificateShow.python01">程式語言 Python3</p>
+              <div
+                v-if="isRotate"
+                class="grid gap-1 w-fit ml-2 pl-3 opacity-90 border-l border-l-primary-600"
+              >
+                <p @click="isCertificateShow.python03 = !isCertificateShow.python03">
+                  軟體開發知識
+                </p>
+                <p @click="isCertificateShow.python02 = !isCertificateShow.python02">
+                  網頁資料擷取與分析 Python3
+                </p>
+                <p @click="isCertificateShow.python01 = !isCertificateShow.python01">
+                  程式語言 Python3
+                </p>
               </div>
             </div>
           </div>
@@ -86,78 +112,80 @@
       </div>
       <div class="grid gap-1 ml-4 md:grid-cols-2 2xl:gap-3">
         <div class="flex items-center gap-1 md:hidden">
-          <img class="icon" src="@/assets/images/Java.png">
+          <img class="icon" src="@/assets/images/Java.png" />
           <p>Java</p>
         </div>
         <div class="flex items-center gap-1 md:hidden">
-          <img class="icon" src="@/assets/images/SpringBoot.png">
+          <img class="icon" src="@/assets/images/SpringBoot.png" />
           <p>Spring Boot</p>
         </div>
         <div class="flex items-center gap-1 md:hidden">
-          <img class="icon" src="@/assets/images/Python.png">
+          <img class="icon" src="@/assets/images/Python.png" />
           <p>Python</p>
         </div>
         <div class="flex items-center gap-1 md:hidden">
-          <img class="icon" src="@/assets/images/Selenium.png">
+          <img class="icon" src="@/assets/images/Selenium.png" />
           <p>Selenium</p>
         </div>
         <div class="flex items-center gap-1 md:hidden">
-          <img class="icon !min-w-[56px]" src="@/assets/images/BeautifulSoup.png">
+          <img class="icon !min-w-[56px]" src="@/assets/images/BeautifulSoup.png" />
           <p>BeautifulSoup</p>
         </div>
         <div class="flex items-center gap-1 md:hidden">
-          <img class="icon" src="@/assets/images/Vue.png">
-          <p>Vue</p>
+          <img class="icon" src="@/assets/images/Vue.png" />
+          <p>Vue3</p>
         </div>
         <div class="flex items-center gap-1 md:hidden">
-          <img class="icon" src="@/assets/images/Tailwindcss.png">
+          <img class="icon" src="@/assets/images/Tailwindcss.png" />
           <p>Tailwindcss</p>
         </div>
         <div class="flex items-center gap-1 md:hidden">
-          <img class="icon" src="@/assets/images/Typescript.png">
+          <img class="icon" src="@/assets/images/Typescript.png" />
           <p>Typescript</p>
         </div>
         <div class="flex items-center gap-1 md:hidden">
-          <img class="icon" src="@/assets/images/Javascript.png">
+          <img class="icon" src="@/assets/images/Javascript.png" />
           <p>Javascript</p>
         </div>
 
         <div class="hidden items-center gap-1 md:flex">
-          <img class="icon" src="@/assets/images/Java.png">
+          <img class="icon" src="@/assets/images/Java.png" />
           <p>Java</p>
         </div>
+        <div class="hidden items-center gap-1 md:flex"></div>
         <div class="hidden items-center gap-1 md:flex">
-        </div>
-        <div class="hidden items-center gap-1 md:flex">
-          <img class="icon" src="@/assets/images/SpringBoot.png">
+          <img class="icon" src="@/assets/images/SpringBoot.png" />
           <p>Spring Boot</p>
         </div>
         <div class="hidden items-center gap-1 md:flex">
-          <img class="icon" src="@/assets/images/Vue.png">
-          <p>Vue</p>
+          <img class="icon" src="@/assets/images/Vue.png" />
+          <p>Vue3</p>
         </div>
         <div class="hidden items-center gap-1 md:flex">
-          <img class="icon" src="@/assets/images/Python.png">
+          <img class="icon" src="@/assets/images/Python.png" />
           <p>Python</p>
         </div>
         <div class="hidden items-center gap-1 md:flex">
-          <img class="icon" src="@/assets/images/Tailwindcss.png">
+          <img class="icon" src="@/assets/images/Tailwindcss.png" />
           <p>Tailwindcss</p>
         </div>
         <div class="hidden items-center gap-1 md:flex">
-          <img class="icon" src="@/assets/images/Selenium.png">
+          <img class="icon" src="@/assets/images/Selenium.png" />
           <p>Selenium</p>
         </div>
         <div class="hidden items-center gap-1 md:flex">
-          <img class="icon" src="@/assets/images/Typescript.png">
+          <img class="icon" src="@/assets/images/Typescript.png" />
           <p>Typescript</p>
         </div>
         <div class="hidden items-center gap-1 md:flex">
-          <img class="icon !min-w-[56px] lg:!min-w-[72px]" src="@/assets/images/BeautifulSoup.png">
+          <img
+            class="icon !min-w-[56px] lg:!min-w-[72px]"
+            src="@/assets/images/BeautifulSoup.png"
+          />
           <p>BeautifulSoup</p>
         </div>
         <div class="hidden items-center gap-1 md:flex">
-          <img class="icon" src="@/assets/images/Javascript.png">
+          <img class="icon" src="@/assets/images/Javascript.png" />
           <p>Javascript</p>
         </div>
       </div>
@@ -168,35 +196,61 @@
         <h5>關於我</h5>
       </div>
       <p class="text-justify">
-        　　具備兩年後端學習背景，使用語言為 Java、Python，會使用 Java 的 Spring Boot 框架及 Python 的 Selenium、BeautifulSoup 套件，懂資料庫基本操作，已取得 ITS Java、TQC 物件導向程式語言 Java、 TQC 大數據分析專業人才證照。<br><br>
-  
-        　　兩年前端經驗，於 Vue.js 前端框架專案中負責規劃 RWD 響應式網頁，並進行 API 串接與 CRUD 功能實作。<br><br>
+        　　具備兩年後端學習背景，使用語言為 Java、Python，會使用 Java 的 Spring Boot 框架及 Python
+        的 Selenium、BeautifulSoup 套件，懂資料庫基本操作，已取得 ITS Java、TQC 物件導向程式語言
+        Java、 TQC 大數據分析專業人才證照。<br /><br />
 
-        　　於擔任營業處督導期間，負責行銷企劃、規劃執行、人員管理與溝通協作，這些經驗培養了我良好的團隊合作和溝通能力。擅長跨部門協作，能有效地與團隊成員合作，達成專案目標。<br><br>
+        　　兩年前端經驗，於 Vue.js 前端框架專案中負責規劃 RWD 響應式網頁，並進行 API 串接與 CRUD
+        功能實作。<br /><br />
+
+        　　於擔任營業處督導期間，負責行銷企劃、規劃執行、人員管理與溝通協作，這些經驗培養了我良好的團隊合作和溝通能力。擅長跨部門協作，能有效地與團隊成員合作，達成專案目標。<br /><br />
 
         　　我性格謙和、樂觀且活潑，致力於成為一名圓融通達的專業人才。
       </p>
     </div>
 
     <div class="area area-project">
-      <div class="title-line">
-        <h5>Side Project</h5>
+      <div class="title-line flex items-baseline pl-9 !w-fit">
+        <h5>Side Project:</h5>
+        <p class="ml-2">後端 & 前端 & UI</p>
       </div>
       <div class="grid">
-        <a class="title-a" href="http://3.26.162.208:8080/" target="_blank">Top Food Now 餐廳推薦系統</a>
+        <a class="title-a" href="http://54.253.115.242:4000/" target="_blank"
+          >Top Food Now 餐廳推薦系統</a
+        >
         <ol>
-          <li>後端語言 - Java</li>
-          <li>後端框架 - Spring Boot</li>
-          <li>IDE - IntelliJ</li>
+          <li>
+            <a
+              class="underline-offset-2"
+              href="http://54.253.115.242:8080/swagger-ui/index.html"
+              target="_blank"
+              style="text-decoration: underline"
+              >後端 - Java (Spring Boot)</a
+            >
+          </li>
+          <li>前端 - Vue3 + Typescript</li>
+          <li>
+            <a
+              class="underline-offset-2"
+              href="https://github.com/Kinokino00/TopFoodNow/tree/develop"
+              target="_blank"
+              style="text-decoration: underline"
+              >版本控制 - Github</a
+            >
+          </li>
           <li>資料庫 - MySQL</li>
+          <li>IDE - IntelliJ</li>
           <li>雲端平台 - AWS</li>
+          <li>圖片存取 - Google Cloud Storage</li>
         </ol>
       </div>
       <div class="title-line mt-3">
         <h5>前端專案經驗</h5>
       </div>
       <div class="grid">
-        <a class="title-a" href="https://gems-tw-enterprise-se.ew-demo.com/" target="_blank">智慧能源管理監控系統</a>
+        <a class="title-a" href="https://gems-tw-enterprise-se.ew-demo.com/" target="_blank"
+          >智慧能源管理監控系統</a
+        >
         <ol>
           <li>前端框架 - 使用 Vue.js 進行前端開發</li>
           <li>響應式介面 - 利用 Scss + Tailwindcss 之 CSS 框架規劃</li>
@@ -206,26 +260,61 @@
         </ol>
       </div>
       <div class="grid">
-        <a class="title-a" href="https://ghg-test.ewqa.cc/" target="_blank">組織型溫室氣體盤查平台</a>
+        <a class="title-a" href="https://ghg-test.ewqa.cc/" target="_blank"
+          >組織型溫室氣體盤查平台</a
+        >
         <ol>
           <li>i18n 多國語系設定與運用</li>
         </ol>
       </div>
-      <div class="title-a" style="text-decoration: none;">SmartSOS 智慧對講門禁求救系統 APP</div>
+      <div class="title-a" style="text-decoration: none">SmartSOS 智慧對講門禁求救系統 APP</div>
     </div>
 
-    <div v-if="Object.values(isCertificateShow).some(show => show)" class="certificates" @click="isCertificateShowAll">
-      <img v-if="isCertificateShow.itsjava" class="certificates-img" src="@/assets/images/certificate/certificateITSjava.jpg" alt="TQC java">
-      <img v-if="isCertificateShow.tqcjava" class="certificates-img" src="@/assets/images/certificate/certificateTQCjava.jpg" alt="TQC java">
-      <img v-if="isCertificateShow.python00" class="certificates-img" src="@/assets/images/certificate/certificate00.jpg" alt="TQC 大數據分析專業人才">
-      <img v-if="isCertificateShow.python01" class="certificates-img" src="@/assets/images/certificate/certificate01.jpg" alt="TQC">
-      <img v-if="isCertificateShow.python02" class="certificates-img" src="@/assets/images/certificate/certificate02.jpg" alt="TQC">
-      <img v-if="isCertificateShow.python03" class="certificates-img" src="@/assets/images/certificate/certificate03.jpg" alt="TQC">
-      <img class="close-icon" src="@/assets/images/xmark-solid.png" alt="關閉">
+    <div
+      v-if="Object.values(isCertificateShow).some((show) => show)"
+      class="certificates"
+      @click="isCertificateShowAll"
+    >
+      <img
+        v-if="isCertificateShow.itsjava"
+        class="certificates-img"
+        src="@/assets/images/certificate/certificateITSjava.jpg"
+        alt="TQC java"
+      />
+      <img
+        v-if="isCertificateShow.tqcjava"
+        class="certificates-img"
+        src="@/assets/images/certificate/certificateTQCjava.jpg"
+        alt="TQC java"
+      />
+      <img
+        v-if="isCertificateShow.python00"
+        class="certificates-img"
+        src="@/assets/images/certificate/certificate00.jpg"
+        alt="TQC 大數據分析專業人才"
+      />
+      <img
+        v-if="isCertificateShow.python01"
+        class="certificates-img"
+        src="@/assets/images/certificate/certificate01.jpg"
+        alt="TQC"
+      />
+      <img
+        v-if="isCertificateShow.python02"
+        class="certificates-img"
+        src="@/assets/images/certificate/certificate02.jpg"
+        alt="TQC"
+      />
+      <img
+        v-if="isCertificateShow.python03"
+        class="certificates-img"
+        src="@/assets/images/certificate/certificate03.jpg"
+        alt="TQC"
+      />
+      <img class="close-icon" src="@/assets/images/xmark-solid.png" alt="關閉" />
     </div>
   </div>
 </template>
-
 
 <script lang="ts" setup>
 import { reactive, ref } from 'vue'
@@ -246,31 +335,34 @@ const certificateItem = ref<CertificateItem[]>([
     ad: '2023/05 ~ 2025/06',
     job: 'Front-End Developer',
     ml: 104,
-    company: '樺康智雲股份有限公司',
-  }, {
+    company: '樺康智雲股份有限公司'
+  },
+  {
     tenureYear: 1,
     tenureMonth: 11,
     ad: '2021/04 ~ 2023/03',
     job: 'Front-End Developer',
     jobAdjunct: '& UI Designer',
     ml: 0,
-    company: '登伴有限公司',
-  }, {
+    company: '登伴有限公司'
+  },
+  {
     tenureYear: 1,
     tenureMonth: 10,
     ad: '2019/05 ~ 2021/02',
     job: 'UI Designer',
     jobAdjunct: '& Graphic Designer',
     ml: 26,
-    company: '蝦米智慧股份有限公司',
-  }, {
+    company: '蝦米智慧股份有限公司'
+  },
+  {
     tenureYear: 1,
     tenureMonth: 8,
     ad: '2015/10 ~ 2017/05',
     job: 'Supervise',
     jobAdjunct: '& Graphic Designer',
     ml: 36,
-    company: '錏洲娛樂機械有限公司',
+    company: '錏洲娛樂機械有限公司'
   }
 ])
 
@@ -294,22 +386,21 @@ const isCertificateShowAll = () => {
 }
 </script>
 
-
 <style lang="scss" scoped>
 h2 {
   @apply font-semibold;
 }
 .dashboard {
   @apply relative py-[8vh] md:pt-[13vh];
-  background: linear-gradient(to right, #F8F6F3 15%, #FFD0A6 15.1%, #FFD0A6 60%, #F8F6F3 60.1%);
+  background: linear-gradient(to right, #f8f6f3 15%, #ffd0a6 15.1%, #ffd0a6 60%, #f8f6f3 60.1%);
   @media screen and (min-width: 630px) {
-    background: linear-gradient(to right, #F8F6F3 15%, #FFD0A6 15.1%, #FFD0A6 55.5%, #F8F6F3 55.6%);
+    background: linear-gradient(to right, #f8f6f3 15%, #ffd0a6 15.1%, #ffd0a6 55.5%, #f8f6f3 55.6%);
   }
   @media screen and (min-width: 840px) {
-    background: linear-gradient(to right, #F8F6F3 13%, #FFD0A6 13.1%, #FFD0A6 56%, #F8F6F3 56.1%);
+    background: linear-gradient(to right, #f8f6f3 13%, #ffd0a6 13.1%, #ffd0a6 56%, #f8f6f3 56.1%);
   }
   @media screen and (min-width: 980px) {
-    background: linear-gradient(to right, #F8F6F3 12%, #FFD0A6 12.1%, #FFD0A6 54.8%, #F8F6F3 54.9%);
+    background: linear-gradient(to right, #f8f6f3 12%, #ffd0a6 12.1%, #ffd0a6 54.8%, #f8f6f3 54.9%);
   }
 }
 p {
@@ -321,9 +412,9 @@ p {
 }
 .photo-kino {
   @apply z-10 max-h-fit mb-[8vh] w-[34vw];
-  @apply  md:z-auto md:absolute md:bottom-[10%] md:left-[13vw] md:mb-0 md:w-[20vw];
-  @apply  lg:-bottom-[15%] lg:left-[9.5vw]  lg:w-[20vw] lg:top-auto;
-  @apply  xl:-bottom-[10%] xl:left-[10.9vw];
+  @apply md:z-auto md:absolute md:bottom-[10%] md:left-[13vw] md:mb-0 md:w-[20vw];
+  @apply lg:-bottom-[15%] lg:left-[9.5vw]  lg:w-[20vw] lg:top-auto;
+  @apply xl:-bottom-[10%] xl:left-[10.9vw];
   @apply 2xl:left-[16vw];
 }
 .area {
@@ -342,9 +433,9 @@ p {
 
   &-work {
     @apply grid w-full px-[12vw] pt-4 pb-[10vh] -ml-2 bg-secondary-500;
-    @apply  md:px-[14%]   md:py-[8%]   md:mr-[13vw]  md:ml-auto md:w-fit md:justify-center;
-    @apply  lg:px-[10%]   lg:py-[12%]  lg:mr-[5vw];
-    @apply  xl:pt-[10%]   xl:pb-[13%]  xl:mr-[7.5vw] xl:min-h-[40vh] xl:min-w-[66vw];
+    @apply md:px-[14%]   md:py-[8%]   md:mr-[13vw]  md:ml-auto md:w-fit md:justify-center;
+    @apply lg:px-[10%]   lg:py-[12%]  lg:mr-[5vw];
+    @apply xl:pt-[10%]   xl:pb-[13%]  xl:mr-[7.5vw] xl:min-h-[40vh] xl:min-w-[66vw];
     @apply 2xl:pl-[24vw] 2xl:pt-[8%]  2xl:mr-[10vw] 2xl:min-h-[34vh];
     .area-line {
       @apply absolute top-4 xl:top-5 left-[3px] w-px h-full text-white bg-white;
@@ -366,9 +457,9 @@ p {
 
   &-certificate {
     @apply relative mt-[70px] ml-[15vw] whitespace-nowrap;
-    @apply  md:mt-[27vh];
-    @apply  lg:ml-[13vw];
-    @apply  xl:mt-[25vh] xl:ml-[12vw];
+    @apply md:mt-[27vh];
+    @apply lg:ml-[13vw];
+    @apply xl:mt-[25vh] xl:ml-[12vw];
     @apply 2xl:mt-[20%];
     .title-line {
       @apply text-primary-700 border-primary-600;
@@ -386,7 +477,9 @@ p {
             @apply md:w-[150px] md:h-[88px];
             @apply lg:w-[216px] lg:h-[124px];
           }
-          .ITS, .ITS-s, .TQC {
+          .ITS,
+          .ITS-s,
+          .TQC {
             @apply h-full;
             background-position: center right;
             background-repeat: no-repeat;
@@ -406,7 +499,8 @@ p {
         &-detail {
           @apply ml-4;
           @apply xl:flex-row xl:items-start xl:gap-5;
-          h2, p {
+          h2,
+          p {
             @apply text-primary-700 cursor-pointer;
             text-decoration: underline;
           }
@@ -424,9 +518,9 @@ p {
 
   &-skill {
     @apply relative pl-4 py-3 mt-20 left-[58vw] -translate-x-1/2 w-[60vw] bg-tertiary-500;
-    @apply  md:left-[65vw] md:mt-16 md:pl-8 md:py-7;
-    @apply  lg:pl-14  lg:pt-12 lg:pb-16;
-    @apply  xl:pl-10 xl:left-0 xl:ml-auto xl:mr-[7vw] xl:translate-x-0 xl:w-[40vw];
+    @apply md:left-[65vw] md:mt-16 md:pl-8 md:py-7;
+    @apply lg:pl-14  lg:pt-12 lg:pb-16;
+    @apply xl:pl-10 xl:left-0 xl:ml-auto xl:mr-[7vw] xl:translate-x-0 xl:w-[40vw];
     @apply 2xl:mt-12 2xl:mr-[5.5vw] 2xl:w-[41vw];
     .title-line {
       @apply -ml-4 mb-3 w-12;
@@ -452,12 +546,12 @@ p {
       @apply xl:-ml-[6rem] xl:w-[10rem];
     }
   }
-  
+
   &-project {
     @apply relative grid gap-2 pl-6 py-10 -mt-4 ml-auto w-[65vw] bg-secondary-400 text-secondary-900;
-    @apply  md:pl-12 md:pr-7;
-    @apply  lg:w-[61vw] lg:mr-[9vw];
-    @apply  xl:w-[42vw] xl:mr-[10vw] xl:-mt-[13vh] xl:pl-16;
+    @apply md:pl-12 md:pr-7;
+    @apply lg:w-[61vw] lg:mr-[9vw];
+    @apply xl:w-[42vw] xl:mr-[10vw] xl:-mt-[13vh] xl:pl-16;
     @apply 2xl:-mt-[16vh];
     .title-line {
       @apply -ml-6 mb-2 w-[100px] text-secondary-900 border-secondary-900;
@@ -475,9 +569,9 @@ p {
 
 .university {
   @apply absolute left-[61vw] -translate-x-1/2 w-max font-semibold opacity-50;
-  @apply  md:left-[58vw]  md:mt-[7.5rem];
-  @apply  lg:left-[55.5vw];
-  @apply  xl:left-[53vw]  xl:mt-[.5rem];
+  @apply md:left-[58vw]  md:mt-[7.5rem];
+  @apply lg:left-[55.5vw];
+  @apply xl:left-[53vw]  xl:mt-[.5rem];
   @apply 2xl:left-[53.5vw] 2xl:mt-0.5;
 }
 
@@ -501,13 +595,13 @@ p {
 
   &-menu {
     @apply absolute grid justify-center left-[32vw] bottom-0 -mt-14 text-4xl;
-    @apply  md:left-[calc(50%-16.5vw+3px)] md:-bottom-[7.5rem] md:mt-0;
-    @apply  lg:left-[31.5vw];
-    @apply  xl:left-[33.8vw] xl:-bottom-2;
+    @apply md:left-[calc(50%-16.5vw+3px)] md:-bottom-[7.5rem] md:mt-0;
+    @apply lg:left-[31.5vw];
+    @apply xl:left-[33.8vw] xl:-bottom-2;
     @apply 2xl:left-[37.5vw];
     --stroke-width: 2px;
     --background-gradient: linear-gradient(to right, #ff821c 45%, #2e6d63 45.1%);
-    --text-gradient: linear-gradient(to right, #FFD0A6 47%, #91BDB7 47.1%);
+    --text-gradient: linear-gradient(to right, #ffd0a6 47%, #91bdb7 47.1%);
     @media screen and (min-width: 630px) {
       --background-gradient: linear-gradient(to right, #ff7300 40%, #ff821c 40.1%);
       --text-gradient: linear-gradient(to right, #e0dcd9 40%, #e0dcd9 40.1%);
@@ -524,12 +618,13 @@ p {
 
   &-name {
     @apply relative block w-fit -ml-[34px] text-right text-transparent font-normal tracking-[3px];
-    @apply  md:text-[48px]  md:-ml-[62px]   md:-top-[.2rem] md:mix-blend-luminosity;
-    @apply  lg:text-[60px]  lg:-ml-[72px];
-    @apply  xl:text-[80px]  xl:-ml-[108px]  xl:top-[.3rem];
+    @apply md:text-[48px]  md:-ml-[62px]   md:-top-[.2rem] md:mix-blend-luminosity;
+    @apply lg:text-[60px]  lg:-ml-[72px];
+    @apply xl:text-[80px]  xl:-ml-[108px]  xl:top-[.3rem];
     @apply 2xl:text-[90px] 2xl:-ml-[116px] 2xl:top-[2rem];
-    
-    &::before, &::after {
+
+    &::before,
+    &::after {
       content: attr(data-text);
       background-clip: text;
     }
