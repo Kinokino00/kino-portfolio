@@ -211,24 +211,29 @@
 
     <div class="area area-project">
       <div class="title-line flex items-baseline pl-9 !w-fit">
-        <h5>Side Project:</h5>
-        <p class="ml-2">後端 & 前端 & UI</p>
+        <h5>Side Project</h5>
+        <p class="ml-2">負責: 後端 & 前端 & UI</p>
       </div>
       <div class="grid">
-        <a class="title-a" href="http://54.253.115.242:4000/" target="_blank"
-          >Top Food Now 餐廳推薦系統</a
+        <button
+          class="underline-offset-2"
+          style="text-decoration: underline"
+          @click="isProjectShow.frontEnd = true"
         >
+          <p class="title-a">Top Food Now 餐廳推薦系統</p>
+        </button>
         <ol>
           <li>
-            <a
+            <button
               class="underline-offset-2"
-              href="http://54.253.115.242:8080/swagger-ui/index.html"
-              target="_blank"
               style="text-decoration: underline"
-              >後端 - Java (Spring Boot)</a
+              @click="isProjectShow.backEnd = true"
             >
+              後端 - Java (Spring Boot)
+            </button>
           </li>
           <li>前端 - Vue3 + Typescript</li>
+          <li>資料庫 - MySQL</li>
           <li>
             <a
               class="underline-offset-2"
@@ -238,7 +243,6 @@
               >版本控制 - Github</a
             >
           </li>
-          <li>資料庫 - MySQL</li>
           <li>IDE - IntelliJ</li>
           <li>雲端平台 - AWS</li>
           <li>圖片存取 - Google Cloud Storage</li>
@@ -270,54 +274,145 @@
       <div class="title-a" style="text-decoration: none">SmartSOS 智慧對講門禁求救系統 APP</div>
     </div>
 
-    <div
-      v-if="Object.values(isCertificateShow).some((show) => show)"
-      class="certificates"
-      @click="isCertificateShowAll"
-    >
+    <div v-if="isProjectShow.frontEnd" class="dialog">
+      <div class="grid gap-4 py-4 pl-4 pr-1 mx-auto bg-white w-[86vw] rounded-lg shadow">
+        <div class="overflow-y-auto max-h-[calc(100vh-130px)]">
+          <img class="mb-3" src="@/assets/images/project/Dashboard.png" alt="Dashboard" />
+          <img class="mb-3" src="@/assets/images/project/SearchList.png" alt="SearchList" />
+          <img
+            class="mb-3"
+            src="@/assets/images/project/UserRecommendations.png"
+            alt="UserRecommendations"
+          />
+          <img class="mb-3" src="@/assets/images/project/Register.png" alt="Register" />
+          <img src="@/assets/images/project/Login.png" alt="Login" />
+        </div>
+        <div class="w-full text-center">
+          <button class="py-2 px-3 bg-primary-600 text-white rounded-lg hover:bg-primary-700">
+            <a class="underline-offset-2" href="http://54.253.115.242:4000" target="_blank">
+              前往 http://54.253.115.242:4000
+            </a>
+          </button>
+        </div>
+      </div>
+      <img
+        class="close-icon"
+        src="@/assets/images/xmark-solid.png"
+        alt="關閉"
+        @click="closeProject"
+      />
+    </div>
+
+    <div v-if="isProjectShow.backEnd" class="dialog">
+      <div class="flex items-center justify-center gap-1.5 w-[86vw] mx-auto">
+        <button
+          class="button-group"
+          :class="{ active: activeBackEndBtn === 'all' }"
+          @click="activeBackEndBtn = 'all'"
+        >
+          總覽
+        </button>
+        <button
+          class="button-group"
+          :class="{ active: activeBackEndBtn === 'detail' }"
+          @click="activeBackEndBtn = 'detail'"
+        >
+          細項
+        </button>
+      </div>
+      <div
+        v-if="isProjectShow.backEnd"
+        class="grid gap-4 py-4 pl-4 pr-1 mx-auto bg-white w-[86vw] rounded-b-lg shadow"
+      >
+        <div class="overflow-y-auto max-h-[calc(100vh-162px)]">
+          <img
+            v-if="activeBackEndBtn === 'detail'"
+            src="@/assets/images/project/Swagger-all.png"
+            alt="Swagger-all"
+          />
+          <img v-else src="@/assets/images/project/Swagger.png" alt="Swagger" />
+        </div>
+        <div class="w-full text-center">
+          <button class="py-2 px-3 bg-primary-600 text-white rounded-lg hover:bg-primary-700">
+            <a
+              class="underline-offset-2"
+              href="http://54.253.115.242:8080/swagger-ui/index.html"
+              target="_blank"
+            >
+              前往 swagger-ui
+            </a>
+          </button>
+        </div>
+      </div>
+      <img
+        class="close-icon"
+        src="@/assets/images/xmark-solid.png"
+        alt="關閉"
+        @click="closeProject"
+      />
+    </div>
+
+    <div v-if="Object.values(isCertificateShow).some((show) => show)" class="dialog">
       <img
         v-if="isCertificateShow.itsjava"
-        class="certificates-img"
+        class="dialog-img"
         src="@/assets/images/certificate/certificateITSjava.jpg"
         alt="TQC java"
       />
       <img
         v-if="isCertificateShow.tqcjava"
-        class="certificates-img"
+        class="dialog-img"
         src="@/assets/images/certificate/certificateTQCjava.jpg"
         alt="TQC java"
       />
       <img
         v-if="isCertificateShow.python00"
-        class="certificates-img"
+        class="dialog-img"
         src="@/assets/images/certificate/certificate00.jpg"
         alt="TQC 大數據分析專業人才"
       />
       <img
         v-if="isCertificateShow.python01"
-        class="certificates-img"
+        class="dialog-img"
         src="@/assets/images/certificate/certificate01.jpg"
         alt="TQC"
       />
       <img
         v-if="isCertificateShow.python02"
-        class="certificates-img"
+        class="dialog-img"
         src="@/assets/images/certificate/certificate02.jpg"
         alt="TQC"
       />
       <img
         v-if="isCertificateShow.python03"
-        class="certificates-img"
+        class="dialog-img"
         src="@/assets/images/certificate/certificate03.jpg"
         alt="TQC"
       />
-      <img class="close-icon" src="@/assets/images/xmark-solid.png" alt="關閉" />
+      <img
+        class="close-icon"
+        src="@/assets/images/xmark-solid.png"
+        alt="關閉"
+        @click="closeCertificate"
+      />
     </div>
   </div>
 </template>
 
 <script lang="ts" setup>
 import { reactive, ref } from 'vue'
+
+const isRotate = ref(false)
+const activeBackEndBtn = ref('all')
+
+const isProjectShow = reactive({
+  frontEnd: false,
+  backEnd: false
+})
+const closeProject = () => {
+  isProjectShow.backEnd = false
+  isProjectShow.frontEnd = false
+}
 
 interface CertificateItem {
   tenureYear?: number
@@ -328,7 +423,6 @@ interface CertificateItem {
   ml: number
   company: string
 }
-
 const certificateItem = ref<CertificateItem[]>([
   {
     tenureYear: 2,
@@ -365,9 +459,6 @@ const certificateItem = ref<CertificateItem[]>([
     company: '錏洲娛樂機械有限公司'
   }
 ])
-
-const isRotate = ref(false)
-
 const isCertificateShow = reactive({
   itsjava: false,
   tqcjava: false,
@@ -376,7 +467,7 @@ const isCertificateShow = reactive({
   python02: false,
   python03: false
 })
-const isCertificateShowAll = () => {
+const closeCertificate = () => {
   isCertificateShow.itsjava = false
   isCertificateShow.tqcjava = false
   isCertificateShow.python00 = false
@@ -575,13 +666,20 @@ p {
   @apply 2xl:left-[53.5vw] 2xl:mt-0.5;
 }
 
-.certificates {
+.dialog {
   @apply z-20 fixed top-0 left-0 py-6 w-screen h-screen bg-black/50;
   .close-icon {
     @apply absolute left-6 top-6 w-7 h-7 cursor-pointer;
   }
   &-img {
     @apply absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-[80vh];
+  }
+}
+
+.button-group {
+  @apply py-0.5 px-2 w-1/2 bg-white text-gray-400 rounded-t-lg;
+  &.active {
+    @apply text-primary-600;
   }
 }
 
