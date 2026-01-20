@@ -10,13 +10,15 @@
             <div class="area-info-detail">
               <p class="font-num">
                 {{ info.ad }}
-                <span v-if="info.tenureYear" class="opacity-60">
+                <span v-if="info.tenureYear || info.tenureMonth" class="opacity-60">
                   &nbsp;|&nbsp;
-                  <span class="number">{{ info.tenureYear }}</span
-                  >y
+                  <span v-if="info.tenureYear" class="number">
+                    <span>{{ info.tenureYear }}</span>
+                    <span>y</span>
+                  </span>
                   <span v-if="info.tenureMonth">
-                    <span>{{ info.tenureMonth }}</span
-                    >m
+                    <span>{{ info.tenureMonth }}</span>
+                    <span>m</span>
                   </span>
                 </span>
               </p>
@@ -196,20 +198,43 @@
         <h5>關於我</h5>
       </div>
       <p class="text-justify">
-        　　具備兩年後端學習背景，使用語言為 Java、Python，會使用 Java 的 Spring Boot 框架及 Python
-        的 Selenium、BeautifulSoup 套件，懂資料庫基本操作，已取得 ITS Java、TQC 物件導向程式語言
-        Java、 TQC 大數據分析專業人才證照。<br /><br />
-
-        　　兩年前端經驗，於 Vue.js 前端框架專案中負責規劃 RWD 響應式網頁，並進行 API 串接與 CRUD
-        功能實作。<br /><br />
-
-        　　於擔任營業處督導期間，負責行銷企劃、規劃執行、人員管理與溝通協作，這些經驗培養了我良好的團隊合作和溝通能力。擅長跨部門協作，能有效地與團隊成員合作，達成專案目標。<br /><br />
-
-        　　我性格謙和、樂觀且活潑，致力於成為一名圓融通達的專業人才。
+        【技術實績】 <br />　　前端開發：深耕 Vue.js 框架，擅長規劃 RWD 響應式佈局。具備豐富的 CRUD
+        功能實作經驗，能精準處理前端資料流與使用者交互邏輯。<br />
+        　　後端實作：於信用卡申請平台專案中，負責 RESTful API 開發。熟練掌握 Spring Boot
+        與資料庫基本操作，並具備運用 Python 進行自動化爬蟲 (Selenium/BeautifulSoup) 之能力。<br />
+        　　全端思維：能從全域視角優化系統，具備效能優化意識，致力於透過優化資料庫呼叫邏輯來提升 API
+        響應速度。<br /><br />
+        【團隊協作與管理】<br />
+        　　曾任營業處督導，負責行銷企劃、規劃執行、人員管理與溝通協作，這些經驗培養了我良好的團隊合作和溝通能力。<br />
+        　　擅長跨部門協作，能有效地與團隊成員合作，將複雜的業務需求轉化為清晰的開發重點，在團隊中扮演技術與業務間的橋樑，達成專案目標。
       </p>
     </div>
 
     <div class="area area-project">
+      <div class="title-line pl-9 !w-fit">
+        <h5>後端專案經驗</h5>
+      </div>
+      <div class="grid">
+        <div class="title-a" style="text-decoration: none">台灣中小企業銀行信用卡申請系統</div>
+        <ol>
+          <li>
+            API 業務邏輯實作：基於 Spring Boot 框架開發信用卡申請流程相關
+            API，負責欄位格式檢核、必填項驗證及資料處理邏輯實作。
+          </li>
+          <li>
+            介面規格核對：使用 Swagger 進行 API
+            文件管理與介面測試，確保回傳參數與資料格式符合技術規格與前端開發需求。
+          </li>
+          <li>
+            業務需求轉化：參與內部規格討論會議，將 PM 規劃的業務規則轉化為 Spring Boot
+            框架架構，包含 Controller、Service、Repository 層的開發。
+          </li>
+          <li>
+            團隊版本控管：使用 Git 進行版本控制與團隊協作開發，遵循團隊 Code Review
+            流程，確保程式碼品質與專案穩定性。
+          </li>
+        </ol>
+      </div>
       <div class="title-line flex items-baseline pl-9 !w-fit">
         <h5>Side Project</h5>
         <p class="ml-2">負責: 後端 & 前端 & UI</p>
@@ -425,6 +450,12 @@ interface CertificateItem {
 }
 const certificateItem = ref<CertificateItem[]>([
   {
+    ad: '2025/09 至今',
+    job: 'Back-End Developer',
+    ml: 104,
+    company: '精誠資訊股份有限公司'
+  },
+  {
     tenureYear: 2,
     ad: '2023/05 ~ 2025/06',
     job: 'Front-End Developer',
@@ -447,7 +478,7 @@ const certificateItem = ref<CertificateItem[]>([
     job: 'UI Designer',
     jobAdjunct: '& Graphic Designer',
     ml: 26,
-    company: '蝦米智慧股份有限公司'
+    company: '蝦米智慧媒體股份有限公司'
   },
   {
     tenureYear: 1,
