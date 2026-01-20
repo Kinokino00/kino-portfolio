@@ -211,7 +211,7 @@
     </div>
 
     <div class="area area-project">
-      <div class="title-line pl-9 !w-fit">
+      <div class="title-line">
         <h5>後端專案經驗</h5>
       </div>
       <div class="grid">
@@ -240,13 +240,14 @@
         <p class="ml-2">負責: 後端 & 前端 & UI</p>
       </div>
       <div class="grid">
-        <button
+        <!-- <button
           class="underline-offset-2"
           style="text-decoration: underline"
           @click="isProjectShow.frontEnd = true"
         >
           <p class="title-a">Top Food Now 餐廳推薦系統</p>
-        </button>
+        </button> -->
+        <div class="title-a" style="text-decoration: none">Top Food Now 餐廳推薦系統</div>
         <ol>
           <li>
             <button
